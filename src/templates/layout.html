@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domenico Pages</title>
+    <!--  BOOTSTRAP 4  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  CUSTOM CSS  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand fs-4" href="#"><span class="text-info">Domenico</span> Web</a>
+          <!-- Toggle btn -->
+          <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- SideBar -->
+          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- SideBar Header -->
+            <div class="offcanvas-header text-white border-buttom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Domenico Web</h5>
+              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- SideBar Body -->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 fs-5">
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#proyect">Proyect's</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#contact">Contact me</a>
+                </li>
+              </ul>
+              <!-- Whatsapp/Linkedin/Mail -->
+              <div class="d-flex justify-content-center align-items-center gab-3" >
+                <a href="" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #15A6EA;">Linkedin</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+        {% block content %}
+
+        {% endblock %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

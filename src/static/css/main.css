@@ -1,0 +1,72 @@
+
+@media(max-width: 991px){
+    .sidebar{
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.animation{
+    margin: 0;
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	position: relative;
+}
+.earth {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: url('../img/earth.png');
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: ani-3 15s linear infinite;
+}
+.moon {
+	width: 60px;
+	height: 60px;
+	background: url('../img/moon.png');
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	animation: ani-1 7s linear infinite;
+}
+.star {
+	width: 5px;
+	height: 5px;
+	background-color: #fff;
+	position: absolute;
+	animation: ani-2 2s linear infinite;
+}
+@keyframes ani-3 {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+@keyframes ani-1 {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+	}
+}
+@keyframes ani-2 {
+	0%, 100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
